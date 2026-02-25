@@ -1,0 +1,32 @@
+{
+  "name": "utilio-slack-bot",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-03-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+  },
+  "d1_databases": [
+    {
+      "binding": "UTILIO_DB",
+      "database_name": "utilio-db",
+      "database_id": "f9592004-f2d7-4271-882f-96ae4248782b",
+    },
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "RATE_LIMITER_KV",
+      "id": "c02b96c55fcd4551bb24219c273f8236",
+    },
+    {
+      "binding": "SUBSCRIPTION_PLANS_KV",
+      "id": "5777b4b5fb4c42f288823292100ae599",
+    },
+  ],
+  "vars": {
+    "SLACK_VERIFICATION_ENABLED": "true",
+    "UPGRADE_URL": "https://utilio-subscriptions.utilio.workers.dev/upgrade",
+    "SLACK_REDIRECT_URI": "https://utilio-subscriptions.utilio.workers.dev/oauth_redirect",
+  },
+}

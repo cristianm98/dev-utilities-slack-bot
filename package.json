@@ -1,0 +1,40 @@
+{
+  "name": "utilio-slack-bot",
+  "version": "0.1.0",
+  "description": "Utilio - A Slack developer toolbox bot running on Cloudflare Workers",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --ip 127.0.0.1",
+    "dev:local": "wrangler dev --local --ip 127.0.0.1",
+    "deploy": "wrangler deploy",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@hono-rate-limiter/cloudflare": "0.2.2",
+    "cronstrue": "^3.3.0",
+    "hono": "^4.9.10",
+    "hono-rate-limiter": "0.4.2",
+    "jose": "^6.1.3",
+    "jwt-decode": "^4.0.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250307.0",
+    "@types/node": "^22.5.4",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "vite-tsconfig-paths": "^6.0.3",
+    "vitest": "^4.0.16",
+    "wrangler": "^4.42.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

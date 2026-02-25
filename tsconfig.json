@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ESNext"],
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@middleware/*": ["middleware/*"],
+      "@routes/*": ["routes/*"],
+      "@service/*": ["service/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "types": ["@cloudflare/workers-types", "vitest/globals", "node"]
+  },
+  "include": ["src/**/*", "test/**/*", "wrangler.jsonc"],
+  "exclude": ["node_modules", "dist", ".wrangler"]
+}
